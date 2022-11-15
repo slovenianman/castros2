@@ -21,10 +21,6 @@
                     canvas : 'canvas',
                     movement : 'orbital',
                     centerModel : true,
-                    RectAreaLightUniformsLib.init(); 
-                        const rectLight1 = new THREE.RectAreaLight( 0xff0000, 5, 4, 10 ),
-                        rectLight1.position.set( - 5, 5, 5 ),
-                        scene.add( rectLight1 ),
                     features : ['grid', 'menu', 'summary', 'orientationBox', ],
                     camera:
                     {
@@ -35,7 +31,11 @@
                         position : [4000, 4000, 4000],
                         fov : 45
                     },
-                    url: 'scene.usdz'
+                    url: 'scene.usdz',
+                    RectAreaLightUniformsLib.init(); 
+                        const rectLight1 = new THREE.RectAreaLight( 0xff0000, 5, 4, 10 ),
+                        rectLight1.position.set( - 5, 5, 5 ),
+                        scene.add( rectLight1 )
                 });
         </script>
 </html>
